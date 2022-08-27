@@ -52,7 +52,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex items-center p-4 mx-auto min-h-screen justify-center bg-purple-500">
+    <div className="flex items-center p-4 mx-auto min-h-screen justify-center bg-cyan-500">
       <main className="gap-4 flex flex-col items-center justify-center w-full h-full">
         {!chosenUsername ? (
           <>
