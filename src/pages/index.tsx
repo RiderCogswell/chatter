@@ -24,12 +24,21 @@ export default function Home() {
 
     socket = io();
 
-    socket.on('newIncomingMessage', (msg) => {
+    socket.on('newIncomingMessage', (msg: { author: any; message: any; }) => {
       setMessages((currentMsg) => [
         ...currentMsg, // doesnt affect other msgs
         { author: msg.author, message: msg.message },
       ]);
       console.log(messages);
     })
+  }
+
+  const sendMessage = async () => {
+    socket.emit('createdMessage', { author: chosenUsername, message });
+    setMessages((currentMsg) => [
+      ...currentMsg,
+      { author: chosenUsername, message },
+    ]);
+    setMessage('')
   }
 }
