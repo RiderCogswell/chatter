@@ -1,7 +1,8 @@
-import io from 'socket.io-client';
+import io, { Socket } from 'socket.io-client';
 import { useState, useEffect } from 'react';
+import { DefaultEventsMap } from '@socket.io/component-emitter';
 
-let socket: { on: (arg0: string, arg1: (msg: { author: any; message: any; }) => void) => void; emit: (arg0: string, arg1: { author: string; message: string; }) => void; };
+let socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
 type Message = {
   author: string;
@@ -39,7 +40,7 @@ export default function Home() {
       ...currentMsg,
       { author: chosenUsername, message },
     ]);
-    setMessage('')
+    setMessage('');
   };
    
   const handleKeyPress = (e: { keyCode: number; }) => {
@@ -57,7 +58,7 @@ export default function Home() {
         {!chosenUsername ? (
           <>
             <h3 className="font-bold text-white text-xl">
-              What's your name?
+              What is your name?
             </h3>
             <input
               type="text"
@@ -102,7 +103,7 @@ export default function Home() {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyUp={handleKeyPress}
                 />
-                <div className="border-l border-gray-300 flex justify-center items-center  rounded-br-md group hover:bg-purple-500 transition-all">
+                <div className="border-l border-gray-300 flex justify-center items-center  rounded-br-md group hover:bg-cyan-400 transition-all">
                   <button
                     className="group-hover:text-white px-3 h-full"
                     onClick={() => {
