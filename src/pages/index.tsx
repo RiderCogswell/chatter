@@ -4,7 +4,7 @@ import { DefaultEventsMap } from '@socket.io/component-emitter';
 
 let socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
-type Message = {
+export type Message = {
   author: string;
   message: string;
 };
