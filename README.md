@@ -3,7 +3,7 @@
 <img src="./public/Screen Shot 2022-09-16 at 12.52.48 AM.png"> 
 
 ## Description
-Professional Chat app built with Next.js, React, Socket.io, Node.js, inquirer! Fill out the prompts start texting!
+Professional Chat app built with Next.js, React, Socket.io, Node.js, inquirer! Fill out the prompts and start texting!
 
 ## Table of Contents
   - [Installation](#installation)
