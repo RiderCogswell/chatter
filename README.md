@@ -1,6 +1,6 @@
 # Chatter
 
-<img src="./public/Screen Shot 2022-09-16 at 12.52.48 AM.png"> 
+[<img src="./public/Screen Shot 2022-09-16 at 12.52.48 AM.png">](https://chatterrr.vercel.app/)
 
 ## Description
 Professional Chat app built with Next.js, React, Socket.io, Node.js, inquirer! Fill out the prompts and start texting!
